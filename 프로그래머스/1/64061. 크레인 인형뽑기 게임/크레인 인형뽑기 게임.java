@@ -20,7 +20,6 @@ class Solution {
         while(!choose.isEmpty()){
             if(check.isEmpty()){
                 check.push(choose.pop());
-                continue;
             }
             if(choose.peek() == check.peek()){
                     choose.pop();
