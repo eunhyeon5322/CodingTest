@@ -1,12 +1,9 @@
 def solution(n):
-    result=[]
-    temp=n
-    result.append(temp)
-    while temp!=1:
-        if temp%2==0:
-            result.append(temp/2)
-            temp=temp/2
+    result=[n]
+    while result[-1]!=1:
+        if result[-1]%2==0:
+            n=result[-1]/2
         else:
-            result.append(3*temp+1)
-            temp=3*temp+1
+            n=result[-1]*3+1
+        result.append(n)
     return result
