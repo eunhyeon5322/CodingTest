@@ -1,7 +1,15 @@
-def solution(arr):
-    if 2 not in arr:
-        return [-1]
-    s= arr.index(2)
-    e= len(arr)-1 - arr[::-1].index(2)
-    
-    return arr[s:e+1]
+def solution(arr): 
+    answer = [-1] 
+    s,e = 0, 0 
+    for i in range(len(arr)): 
+        if arr[i]==2: 
+            s=i 
+            break
+    else:
+        return answer
+    for j in range(len(arr)-1,-1,-1): 
+        if arr[j]==2: 
+            e=j 
+            break 
+    answer=arr[s:e+1] 
+    return answer
