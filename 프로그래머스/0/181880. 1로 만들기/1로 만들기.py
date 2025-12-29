@@ -8,5 +8,3 @@ def solution(num_list):
                 i=(i-1)//2
             count+=1
     return count
-            
-    
