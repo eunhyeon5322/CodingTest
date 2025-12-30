@@ -1,11 +1,4 @@
+from math import prod 
+
 def solution(num_list):
-    sum=0
-    multi=1
-    if len(num_list)>=11:
-        for i in num_list:
-            sum+=i
-        return sum
-    else:
-        for i in num_list:
-            multi*=i
-        return multi
+    return sum(num_list) if len(num_list)>=11 else prod(num_list)
